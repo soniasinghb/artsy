@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Artsy Artist Search">
+        <meta name="author" content="Sonia Singh">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Artist Search</title>
+        <link rel="stylesheet" href="/static/style.css"> 
+        <script src="/static/script.js"></script>    
+    </head>
+    <body>
+        <div class="header">
+            <header>Artist Search</header>
+        </div>
+        <div id="maincontainer" class="container">
+            <form action="" id="artistForm" class="search_bar">
+                <button type="submit"><img id="search_img" src="/static/search_icon.png"></button>
+                <input type="text" id="q" placeholder="Please enter an artist name." required>
+                <button type="reset"><img id="clear_img" src="/static/clear_icon.png"></button>
+            </form>
+            <img src="/static/loading.gif" id="loadingGIF" alt="loading..." class="loadingGif" style="display: none;">
+            <div id="artistImages" class="displayArtists"></div>
+            <div id="noartistsfound" class="noArtists" style="display: none;"></div>
+            <img src="/static/loading.gif" id="loadingGIF2" alt="loading..." class="loadingGif" style="display: none;">
+            <div id="artistDetails" class="artistsDetails"></div>
+        </div>
+        <footer class="footer">
+            <p><a href="https://www.artsy.net/">Powered by</a>
+            <img class="footer-img" src="/static/artsy_logo.svg" alt="Artsy Logo" > 
+            <a href="https://www.artsy.net/">Artsy. </a>
+            </p>
+        </footer>
+    </body>
+</html>

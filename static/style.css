@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header{
+    top: 0;
+    font-size: large;
+    font-family: Helvetica;
+    text-align: left;
+    background-color: rgb(230, 230, 230);
+    padding: 0.8%;
+    z-index: 100;
+}
+.footer{
+    bottom: 0;
+    font-size: small;
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    background-color: rgb(7, 7, 69);
+    padding: 10px;
+    flex-shrink: 0;
+    z-index: 100;
+}
+.footer .footer-img {       /* footer-img element in footer class focused */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.container{
+    padding: 3%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;    
+    justify-content:first baseline; /*aligns on top wrt flex dir*/
+    margin-bottom: 0;
+    overflow-y: auto
+}
+
+.search_bar{
+    width: 100%;
+    max-width: 580px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    padding: 0px 0.5px;
+}
+
+.search_bar:focus-within:not(:has(button:focus)) {   /* parent changes prop when any child is focused */
+    border: 2px solid orange;
+}
+
+.search_bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 0px 10px;
+    font-size: 15px; 
+    color: black;
+}
+
+#search_img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+}
+
+#search_img:hover{
+    opacity: 1;
+}
+
+#clear_img{
+    width: 15px;
+    height: 15px;
+    opacity: 0.4;
+}
+
+#clear_img:hover{
+    opacity: 1;
+}
+
+.search_bar button{
+    background : transparent;
+    border: 0;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.loadingGif{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: auto;
+    padding-bottom: 0%;
+}
+
+.rectangularShadow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 260px;
+    background-color: #205375;
+    margin: 5px;
+    gap: 5px;
+    padding: 1%;
+}
+
+.rectangularShadow:hover{
+    background-color: #112B3C;
+}
+
+.displayArtists{
+    display: flex;
+    align-items: center;
+    width: 88%;
+    overflow-x: auto;
+    padding-top: 4%;
+    padding-bottom: 0;
+}
+
+.displayArtists img{
+    height: 220px;
+    width: auto;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.imageTitle{
+    font-size: large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15px;
+    text-wrap: wrap;
+}
+
+.noArtists{
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(164, 158, 158, 0.536);
+    width: 37%;
+    height: 50px;
+    max-width: 580px;
+    font-size: small;
+    border-radius: 20px;
+    padding: 0%;
+}
+
+.artistsDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 2%;
+}
+
+.artist_heading{
+    font-size: 22px;
+}
+
+.artist_nationality{
+    font-size: 19px;
+}
+
+.artist_Biography{
+    font-size: smaller;
+    text-align: justify;
+}
